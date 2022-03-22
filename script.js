@@ -179,3 +179,21 @@ function unfold_indent(lines) {
     node.updateIsFolded();
   });
 }
+
+scrapbox.PageMenu.addMenu({
+  title: "インデントを折りたたむ",
+  // TODO: Add your image here
+  image: "",
+  onClick: () => {
+    fold_indent(1, scrapbox.Page.lines);
+  },
+});
+
+scrapbox.PageMenu.addMenu({
+  title: "インデントを展開する",
+  // TODO: Add your image here
+  image: "",
+  onClick: () => {
+    unfold_indent(scrapbox.Page.lines);
+  },
+});
